@@ -18,12 +18,13 @@ const MovingText = () => {
     canvas.height = window.innerHeight;
 
     const draw = () => {
-      // Очищаем канвас на каждом кадре
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Очищаем канвас на каждом кадре и устанавливаем цвет фона
+      ctx.fillStyle = '#FF00FF'; // Цвет фона 
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Устанавливаем стиль текста
       ctx.font = '48px Arial';
-      ctx.fillStyle = '#fggfg'; // Цвет текста
+      ctx.fillStyle = '#00FFFF'; // Цвет текста
 
       // Рисуем текст
       ctx.fillText(text, x, y);
